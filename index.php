@@ -53,8 +53,6 @@
       Made with &#10084; by Crisse &copy; Copyright 2019
     </footer>
 
-    <!-- JavaScript -->
-    <script src="scripts/forecast.js"></script>
-    <script src="scripts/app.js"></script>
+    
   </body>
 </html>
