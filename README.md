@@ -1,13 +1,14 @@
-# wheather-App-JS
+# wheather-App-PHP
 
-Wheather app with AccuWeather API and Javascript Assyn & Await to Fetch data.
+Wheather app with AccuWeather API and PHP cURL to get data.
 
 
 ## Built With
 
 * HTML
 * CSS
-* Javascritp
+* PHP
+* cURL
 * AccWeather API
 
 ## Contributing
@@ -24,5 +25,5 @@ This project is licensed under the MIT License - see the [LICENSE.md](LICENSE.md
 
 ## Acknowledgments
 
-* Javascritp course from The net ninja
+* PHP course from The net ninja
 
