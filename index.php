@@ -9,8 +9,7 @@ if(isset($_POST["submit"]))
 {
   $cityName = htmlspecialchars($_POST["city"]);
   getCity($cityName);
-  //getCurrentWeather($cityKey);
-  //display();
+
 };
 
 ?>

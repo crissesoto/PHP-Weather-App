@@ -16,11 +16,9 @@ function createTemplate($cityDetails, $weather){
     
     "<div class='card shadow-lg rounded '>
 
-    <div class='icon bg-light mx-auto text-center'>
-
+    <div class=' bg-light mx-auto text-center'>
     </div>
     <div class='text-muted text-uppercase text-center details'>
-    <img class='icon' src='img/day.svg' alt='Current wheater icon' />
       <h5 class='my-3'>{$cityDetails["EnglishName"]}</h5>
       <div class='my-3'>{$weather["WeatherText"]}</div>
       <div class='display-4 my-4'>
@@ -31,6 +29,7 @@ function createTemplate($cityDetails, $weather){
   </div>
   </div>" ;
 
+  #<img class='icon' src='img/day.svg' alt='Current wheater icon' />
 
   // add daytime img
   //$weather[IsDayTime]

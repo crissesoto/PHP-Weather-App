@@ -27,5 +27,5 @@
           >Enter a location for weather information</label
         >
         <input type="text" name="city" class="form-control p-4" />
-        <input type="submit" value="Search" name="submit">
+        <input type="submit" value="Search" name="submit" class="btn btn-outline-light">
       </form>
