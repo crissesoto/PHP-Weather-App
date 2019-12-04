@@ -32,7 +32,7 @@ curl_close($curl);
 $response = json_decode($response, true); //because of true, it's in an array
 $data = $response[0];
 
-//return $data;
+return $data;
 ChromePhp::log($data);
 
 }
@@ -67,11 +67,11 @@ curl_close($curl);
 $response = json_decode($response, true); //because of true, it's in an array
 $data = $response[0];
 
-//return $data;
+return $data;
 ChromePhp::log($data);
 
 };
 
-getCity("london");
-getCurrentWeather("328328");
+#getCity("london");
+#getCurrentWeather("328328");
 ?>
