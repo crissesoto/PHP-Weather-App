@@ -1,3 +1,5 @@
+<?php include "templates/forecast.php" ?>
+
 <!DOCTYPE html>
 <html lang="en">
   <head>
