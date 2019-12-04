@@ -33,7 +33,7 @@ function createTemplate($cityDetails, $weather){
 // Get city key for current weather
 
 function getCurrentWeather($cityDetails){
-  $key = "hK88oG7HwoAnH5embXdAAUJThybiLRAk";
+  $key = "nrOGV86jnhxLczGGEhNruxAGVr6rcdGA";
   $cityKey = $cityDetails["Key"];
   $baseURL = "http://dataservice.accuweather.com/currentconditions/v1/$cityKey?apikey=$key";
   #$query = "$cityKey?apikey=$key";
@@ -70,7 +70,7 @@ ChromePhp::log($weather);
 // Get city name for weather info
 
 function getCity($cityname){
-  $key = "hK88oG7HwoAnH5embXdAAUJThybiLRAk";
+  $key = "nrOGV86jnhxLczGGEhNruxAGVr6rcdGA";
   //$cityname = "london";
   $baseURL = "http://dataservice.accuweather.com/locations/v1/cities/search?apikey=$key&q=$cityname";
   #$query = "?apikey=$key&q=$cityName;
