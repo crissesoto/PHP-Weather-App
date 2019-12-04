@@ -28,16 +28,6 @@ function createTemplate($cityDetails, $weather){
     </div>
   </div>
   </div>" ;
-
-  #<img class='icon' src='img/day.svg' alt='Current wheater icon' />
-
-  // add daytime img
-  //$weather[IsDayTime]
-    //? daytime.setAttribute("src", "img/day.svg")
-    //: daytime.setAttribute("src", "img/night.svg");
-
-  // add icon
-  //icon.setAttribute("src", "img/icons/{$weather.WeatherIcon}.svg");
 };
 
 // Get city key for current weather
