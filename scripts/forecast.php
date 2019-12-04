@@ -3,11 +3,49 @@
 
 <?php 
 
+// create template 
+
+
+function createTemplate($cityDetails, $weather){
+  ChromePhp::log($cityDetails, $weather);
+
+  // update details div template
+    //echo "<img src='if({$weather["IsDayTime"]}){echo ../img/day.svg }' alt='Current wheater icon' />";
+
+    echo   
+    
+    "<div class='card shadow-lg rounded '>
+
+    <div class='icon bg-light mx-auto text-center'>
+
+    </div>
+    <div class='text-muted text-uppercase text-center details'>
+    <img class='icon' src='img/day.svg' alt='Current wheater icon' />
+      <h5 class='my-3'>{$cityDetails["EnglishName"]}</h5>
+      <div class='my-3'>{$weather["WeatherText"]}</div>
+      <div class='display-4 my-4'>
+        <span>{$weather["Temperature"]["Metric"]["Value"]}</span>
+        <span>&deg;C</span>
+      </div>
+    </div>
+  </div>
+  </div>" ;
+
+
+  // add daytime img
+  //$weather[IsDayTime]
+    //? daytime.setAttribute("src", "img/day.svg")
+    //: daytime.setAttribute("src", "img/night.svg");
+
+  // add icon
+  //icon.setAttribute("src", "img/icons/{$weather.WeatherIcon}.svg");
+};
 
 // Get city key for current weather
 
-function getCurrentWeather($cityKey){
-  $key = "L6gtFl47bvHJUf6TJHb6jWgAwQ3z7MBK";
+function getCurrentWeather($cityDetails){
+  $key = "hK88oG7HwoAnH5embXdAAUJThybiLRAk";
+  $cityKey = $cityDetails["Key"];
   $baseURL = "http://dataservice.accuweather.com/currentconditions/v1/$cityKey?apikey=$key";
   #$query = "$cityKey?apikey=$key";
 
@@ -30,10 +68,12 @@ $err = curl_error($curl);
 curl_close($curl);
 
 $response = json_decode($response, true); //because of true, it's in an array
-$data = $response[0];
+$weather = $response[0];
 
-return $data;
-ChromePhp::log($data);
+createTemplate($cityDetails, $weather);
+
+//return $data;
+ChromePhp::log($weather);
 
 }
 
@@ -41,7 +81,7 @@ ChromePhp::log($data);
 // Get city name for weather info
 
 function getCity($cityname){
-  $key = "L6gtFl47bvHJUf6TJHb6jWgAwQ3z7MBK";
+  $key = "hK88oG7HwoAnH5embXdAAUJThybiLRAk";
   //$cityname = "london";
   $baseURL = "http://dataservice.accuweather.com/locations/v1/cities/search?apikey=$key&q=$cityname";
   #$query = "?apikey=$key&q=$cityName;
@@ -65,13 +105,15 @@ $err = curl_error($curl);
 curl_close($curl);
 
 $response = json_decode($response, true); //because of true, it's in an array
-$data = $response[0];
+$cityDetails = $response[0];
 
-return $data;
-ChromePhp::log($data);
 
+
+//ChromePhp::log($cityKey);
+getCurrentWeather($cityDetails);
+
+return $cityDetails;
 };
 
-#getCity("london");
-#getCurrentWeather("328328");
+
 ?>
